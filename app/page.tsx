@@ -26,10 +26,6 @@ export default function HomePage() {
       <div className="rounded-3xl border border-[#D1D9E6] bg-white p-6 shadow-lg">
         <AgentForm />
       </div>
-      {/* Disabled append button */}
-      <div className="mt-8 opacity-60">
-
-      </div>
     </main>
   );
 }

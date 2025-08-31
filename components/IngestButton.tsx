@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 type IngestResponse = {
   ok?: boolean;
-  data?: any;         // JSON retornado pelo n8n
+  data?: any;         // JSON returned by n8n 
   error?: string;
 };
 

@@ -5,9 +5,6 @@ type LogoProps = {
   className?: string;
 };
 
-/**
-  Simple logo component approximating a Q letter followed by a pie chart.
- */
 export default function Logo({ size = 64, className = '' }: LogoProps) {
   const dimension = `${size}`;
   const dark = '#14546F';

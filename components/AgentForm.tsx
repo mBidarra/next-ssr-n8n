@@ -38,24 +38,11 @@ type ChartData = {
 };
 
 export default function AgentForm() {
-  /**
-   * Prompt typed by the user. Pre‑populated with a meaningful example
-   * to guide first‑time users. The prompt is bound only to the input at the
-   * bottom; previously sent prompts are stored in the chat history and never
-   * overwritten.
-   */
   const initialPrompt =
     '';
 
   const [prompt, setPrompt] = useState(initialPrompt);
 
-  /**
-   * A list of chat messages. Each entry represents either a user question
-   * or an agent response. When the user submits a query, a new user message and
-   * a placeholder agent message (loading) are appended. Once the response
-   * arrives, we update the placeholder with the final data. This ensures old
-   * messages are never mutated when typing a new prompt.
-   */
   type ChatMsg =
     | { id: string; role: 'user'; text: string }
     | {
@@ -85,7 +72,6 @@ export default function AgentForm() {
       return;
     }
 
-    // Generate simple unique identifiers. Use crypto.randomUUID when available.
     const idUser =
       typeof crypto !== 'undefined' && (crypto as any).randomUUID
         ? (crypto as any).randomUUID()
